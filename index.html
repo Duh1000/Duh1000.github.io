@@ -1,5 +1,6 @@
 <!doctype html>
-<html class="no-js" lang="">
+<!--<html class="no-js" lang="">-->
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -27,7 +28,7 @@
     <h1>Welcome To Zenick Investments</h1>
     <br>
   </center>
-  <form action="action_page.php" method="post">
+  <form name="login" action="dashboard.html" onsubmit="return validateForm()" method="post">
   <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -40,8 +41,19 @@
   </div>
 </form>
 
-
-
+<script>
+function validateForm() {
+  var x = document.forms["login"]["uname"].value;
+  //make sure to delete y after verification
+  //make sure to encrypt y
+  var y = document.forms["login"]["psw"].value;
+  //Make sure to add a database
+  if (x !="Duh") {
+    alert("Invalid User!");
+    return false;
+  }
+}
+</script>
 <!-- Style -->
 </style>
 <style>
@@ -74,29 +86,9 @@ button {
 button:hover {
   opacity: 0.8;
 }
-
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-/* Avatar image */
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
 /* Add padding to containers */
 .container {
   padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
 }
 </style>
 
