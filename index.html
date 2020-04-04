@@ -28,7 +28,7 @@
     <h1>Welcome To Zenick Investments</h1>
     <br>
   </center>
-  <form name="login" action="dashboard" onsubmit="return validateForm()" method="post">
+  <form name="login" onsubmit="return validateForm()" method="post">
   <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -52,6 +52,7 @@ function validateForm() {
     alert("Invalid User!");
     return false;
   }
+  open("https://duh1000.github.io/dashboard","self")
 }
 </script>
 <!-- Style -->
